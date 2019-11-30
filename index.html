@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- custom layout css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            transition: .4s ease-in-out;
+            line-height: 16px;
+        }
+
+        body {
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url("https://instagram.fbne3-1.fna.fbcdn.net/v/t51.2885-15/e35/70863273_391099281537329_6312933831363472638_n.jpg?_nc_ht=instagram.fbne3-1.fna.fbcdn.net&_nc_cat=105&oh=237d749bf008f25df2ce23e6a3a10fa4&oe=5E8CFBEF");
+            background-attachment: fixed;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+        }
+
+        .col {
+            padding: 0;
+            /* height: 100% */
+        }
+
+        .row {
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .container {
+            align-content: flex-end;
+        }
+    </style>
+
+    <style>
+        h1,h2,h3 {
+            /* color: #77A274; */
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .right {
+            background-color: #fff;
+        }
+
+        .content {
+            padding: 2em;
+            line-height: 2rem;
+        }
+    </style>
+
+    <title>Thomas Doyle.</title>
+
+</head>
+
+<body>
+
+    <main class="row">
+
+        <div class="col p-2">
+            <div style="padding: 1em;">
+                <strong>
+                    <h1>Thomas Doyle.</h1>
+                    <p>contact@thomasdoyle.com.au</p>
+                        <a href="#contact-form"><svg class="bi bi-chevron-right" width="16px" height="16px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg></a>
+                </strong>
+            </div>
+        </div>
+
+        <div class="col p-2"></div>
+
+        <div class="col p-2" id="contact-form">
+            <!-- form -->
+            <div class="row align-items-center right">
+                <div class=" col-md-10" style="padding: 1em;">
+                <div class="lg-3">
+                    <h3>Say Hello 👋</h3>
+                </div>
+                <form action="#" method="post">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" class="form-control" name="user_name">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" class="form-control" name="user_mail">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" class="form-control" name="user_message"></textarea>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="button">
+                            <button type="submit" class="btn btn-light btn-inline">Send your message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /form -->
+        </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    
+    <script>
+            function reportWindowSize() {
+                const w = window.innerWidth
+                const body = document.querySelector('body')
+                const main = document.querySelector('main')
+    
+                w1 = w / 2
+                w2 = (w / 2) * 3
+                
+                if (window.innerWidth >= 800) {
+                    main.querySelector('div').style.width = w1 + 'px'
+                    body.style.width =  w2 + 'px'
+
+                } else {
+                    main.querySelector('div').style.width = 'auto'
+                    body.style.width =  window.innerWidth
+                }
+
+                main.style.height = body.height
+                body.style.backgroundSize = w1 * 1.3 + 'px'
+                
+            }
+            window.addEventListener('DOMContentLoaded', reportWindowSize);
+            window.addEventListener('resize', reportWindowSize);
+
+        </script>
+</body>
+
+</html>
