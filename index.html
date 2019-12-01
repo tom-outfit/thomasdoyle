@@ -24,53 +24,52 @@
         }
 
         body {
-            overflow-x: scroll;
+            overflow-y: scroll;
             scroll-behavior: smooth;
         }
 
         body {
             background-image: url("https://instagram.fbne3-1.fna.fbcdn.net/v/t51.2885-15/e35/70863273_391099281537329_6312933831363472638_n.jpg?_nc_ht=instagram.fbne3-1.fna.fbcdn.net&_nc_cat=105&oh=237d749bf008f25df2ce23e6a3a10fa4&oe=5E8CFBEF");
             background-attachment: fixed;
-            background-position: left;
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         main {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin: 0 auto;
         }
 
         .col {
             padding: 0;
-            /* height: 100% */
+            height: 100%
         }
 
         .row {
             margin: 0 auto;
-            height: 100%;
+            /* height: 100%; */
         }
 
-        .container {
+        .right {
             align-content: flex-end;
         }
     </style>
 
     <style>
-        h1,h2,h3 {
+        h1,
+        h2,
+        h3 {
             /* color: #77A274; */
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-        .right {
-            background-color: #fff;
-        }
-
         .content {
             padding: 2em;
             line-height: 2rem;
+            background-color: #fff;
         }
     </style>
 
@@ -80,55 +79,71 @@
 
 <body>
 
-    <main class="row">
-
-        <div class="col p-2">
+    <main class="d-md-flex">
+        <!-- content -->
+        <div class="p-2">
             <div style="padding: 1em;">
-                <strong>
-                    <h1>Thomas Doyle.</h1>
-                    <p>contact@thomasdoyle.com.au</p>
-                        <a href="#contact-form"><svg class="bi bi-chevron-right" width="16px" height="16px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg></a>
-                </strong>
-            </div>
-        </div>
-
-        <div class="col p-2"></div>
-
-        <div class="col p-2" id="contact-form">
-            <!-- form -->
-            <div class="row align-items-center right">
-                <div class=" col-md-10" style="padding: 1em;">
-                <div class="lg-3">
-                    <h3>Say Hello 👋</h3>
+                <div class="d-flex flex-row-inline wrap content" style="align-items: baseline; flex-wrap: wrap;">
+                    <div class="col-md-8">
+                        <strong>
+                            <h1>Thomas Doyle.</h1>
+                        </strong>
+                    </div>
+                    <div class="col-md-4 align-content-right">
+                        <p>contact@thomasdoyle.com.au
+                            <a href="#contact-form">
+                                <svg class="bi bi-chevron-down" width="1em" height="1em" viewBox="0 0 20 20"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.646 6.646a.5.5 0 01.708 0L10 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" class="form-control" name="user_name">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <label for="mail">E-mail:</label>
-                            <input type="email" id="mail" class="form-control" name="user_mail">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <label for="msg">Message:</label>
-                            <textarea id="msg" class="form-control" name="user_message"></textarea>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="button">
-                            <button type="submit" class="btn btn-light btn-inline">Send your message</button>
-                        </div>
-                    </div>
-                </form>
             </div>
-            <!-- /form -->
         </div>
+
+        <!-- filler -->
+        <div class="p-2"></div>
+
+        <!-- form -->
+        <div class="p-2 align-self-center" id="contact-form">
+            <!-- form -->
+            <div class="col-md-12 content right rounded-sm">
+                <div class="" style="padding: 1em;">
+                    <div class="lg-3">
+                        <h3>Say Hello 👋</h3>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" class="form-control" name="user_name">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="mail">E-mail:</label>
+                                <input type="email" id="mail" class="form-control" name="user_mail">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="msg">Message:</label>
+                                <textarea id="msg" class="form-control" name="user_message"></textarea>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="button">
+                                <button type="submit" class="btn btn-light btn-inline">Send your message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /form -->
+            </div>
         </div>
     </main>
 
@@ -144,33 +159,29 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    
+    <!-- vertical -->
     <script>
-            function reportWindowSize() {
-                const w = window.innerWidth
-                const body = document.querySelector('body')
-                const main = document.querySelector('main')
-    
-                w1 = w / 2
-                w2 = (w / 2) * 3
-                
-                if (window.innerWidth >= 800) {
-                    main.querySelector('div').style.width = w1 + 'px'
-                    body.style.width =  w2 + 'px'
+        function reportWindowSize() {
+            const h = window.innerHeight
+            const w = window.innerWidth
+            const main = document.querySelector('main')
+            const body = document.querySelector('body')
 
-                } else {
-                    main.querySelector('div').style.width = 'auto'
-                    body.style.width =  window.innerWidth
-                }
+            let h1 = h / 2
+            let h2 = (h / 2) * 3
 
-                main.style.height = body.height
-                body.style.backgroundSize = w1 * 1.3 + 'px'
-                
-            }
-            window.addEventListener('DOMContentLoaded', reportWindowSize);
-            window.addEventListener('resize', reportWindowSize);
+            body.style.height = h2 + 'px'
+            body.style.backgroundSize = w * 0.9 + 'px'
 
-        </script>
+            main.children[0].style.height = h1 + 'px'
+            main.children[1].style.height = h1 + 'px'
+            main.style.width = window.innerWidth
+
+        }
+        window.addEventListener('DOMContentLoaded', reportWindowSize);
+        window.addEventListener('resize', reportWindowSize);
+
+    </script>
 </body>
 
 </html>
